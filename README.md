@@ -16,8 +16,8 @@
    git clone https://github.com/Jhnvlglmlbrt/basic-auth
 
 2. Нужно установить mkcert:
-
- [Ссылка](https://github.com/FiloSottile/mkcert )
+    
+    [Ссылка](https://github.com/FiloSottile/mkcert )
 
 3. Создать папку certs и сертификаты:
 
