@@ -44,14 +44,12 @@
 
 ### Запросы с помощью Curl, чтобы убедиться, что проверки аутентификации работают правильно
 
-    
-    ```bash
+   ```bash
     curl -i https://localhost:4000/unprotected
 
     curl -i https://localhost:4000/protected
 
     curl -i -u логин:пароль https://localhost:4000/protected
 
-    curl -i -u логин:пароль https://localhost:4000/protected
-    ```
+    curl -i -u логин:неправильный_пароль https://localhost:4000/protected
 
