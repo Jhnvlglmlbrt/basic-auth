@@ -3,6 +3,7 @@ package main
 import (
 	routes "basic-auth/internal/delivery/routes"
 	entity "basic-auth/internal/entity"
+	path "basic-auth/path"
 	"log"
 	"net/http"
 	"os"
@@ -15,6 +16,8 @@ func main() {
 		Username: os.Getenv("AUTH_USERNAME"),
 		Password: os.Getenv("AUTH_PASSWORD"),
 	}
+
+	log.Print(path.GetFilePath())
 
 	if app.Username == "" {
 		log.Fatal("basic auth username must be provided")
@@ -35,7 +38,6 @@ func main() {
 	}
 
 	log.Printf("starting server on %s", srv.Addr)
-	err := srv.ListenAndServeTLS("D:/ProjectsGo/basic-auth/certs/localhost.pem", "D:/ProjectsGo/basic-auth/certs/localhost-key.pem")
-
+	err := srv.ListenAndServeTLS(path.GetFilePath()+"/certs/localhost.pem", path.GetFilePath()+"/certs/localhost-key.pem")
 	log.Fatal(err)
 }
