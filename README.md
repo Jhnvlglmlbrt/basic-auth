@@ -33,7 +33,7 @@
 3. Установить переменную окружения SSL_CERT_FILE, указывая путь к SSL-сертификату
 
     ```bash
-    export SSL_CERT_FILE= путь/basic-auth/certs/ваше_название_сертификата
+    export SSL_CERT_FILE=путь/basic-auth/certs/ваше_название_сертификата
 
 5. Запустите сервер с авторизационными данными:
 
@@ -44,14 +44,12 @@
 
 ### Запросы с помощью Curl, чтобы убедиться, что проверки аутентификации работают правильно
 
-    
-    ```bash
+   ```bash
     curl -i https://localhost:4000/unprotected
 
     curl -i https://localhost:4000/protected
 
     curl -i -u логин:пароль https://localhost:4000/protected
 
-    curl -i -u логин:пароль https://localhost:4000/protected
-    ```
+    curl -i -u логин:неправильный_пароль https://localhost:4000/protected
 
