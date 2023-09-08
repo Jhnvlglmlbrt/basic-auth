@@ -3,7 +3,7 @@ package main
 import (
 	routes "basic-auth/internal/delivery/routes"
 	entity "basic-auth/internal/entity"
-	path "basic-auth/path"
+	"basic-auth/util"
 	"log"
 	"net/http"
 	"os"
@@ -36,6 +36,6 @@ func main() {
 	}
 
 	log.Printf("starting server on %s", srv.Addr)
-	err := srv.ListenAndServeTLS(path.GetFilePath()+"/certs/localhost.pem", path.GetFilePath()+"/certs/localhost-key.pem")
+	err := srv.ListenAndServeTLS(util.GetFilePath()+"/certs/localhost.pem", util.GetFilePath()+"/certs/localhost-key.pem")
 	log.Fatal(err)
 }
