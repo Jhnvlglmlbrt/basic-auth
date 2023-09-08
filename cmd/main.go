@@ -17,8 +17,6 @@ func main() {
 		Password: os.Getenv("AUTH_PASSWORD"),
 	}
 
-	log.Print(path.GetFilePath())
-
 	if app.Username == "" {
 		log.Fatal("basic auth username must be provided")
 	}
