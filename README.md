@@ -30,7 +30,6 @@
     mkdir certs && cd certs
     mkcert localhost
 
-
 5. Установить переменную окружения SSL_CERT_FILE, указывая путь к SSL-сертификату
 
     ```bash
