@@ -15,7 +15,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	req.SetBasicAuth("alice", "p8fnxeqj5a7zbrqp")
+	req.SetBasicAuth("alice", "p8fnxeqj5a7zbrqpp")
 
 	res, err := client.Do(req)
 	if err != nil {
