@@ -10,6 +10,11 @@ import (
 	"time"
 )
 
+// TODO
+// Распределить обработчики и роуты по папкам
+// также структуру application
+// добавить функцию GetPath
+
 type application struct {
 	auth struct {
 		username string
