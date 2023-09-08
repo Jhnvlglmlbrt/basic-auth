@@ -19,23 +19,24 @@
     
     [Ссылка](https://github.com/FiloSottile/mkcert )
 
-3. Создать папку certs и сертификаты:
-
-    ```bash
-    mkdir certs && cd certs
-    mkcert localhost
-
 3. Перейдите в директорию проекта:
 
    ```bash
    cd basic-auth
 
-3. Установить переменную окружения SSL_CERT_FILE, указывая путь к SSL-сертификату
+4. Создать папку certs и сертификаты:
+
+    ```bash
+    mkdir certs && cd certs
+    mkcert localhost
+
+
+5. Установить переменную окружения SSL_CERT_FILE, указывая путь к SSL-сертификату
 
     ```bash
     export SSL_CERT_FILE=путь/basic-auth/certs/ваше_название_сертификата
 
-5. Запустите сервер с авторизационными данными:
+6. Запустите сервер с авторизационными данными:
 
     ```bash
     AUTH_USERNAME=логин AUTH_PASSWORD=пароль go run .
